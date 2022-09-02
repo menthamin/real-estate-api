@@ -21,7 +21,7 @@ url = "http://openapi.molit.go.kr:8081/OpenAPI_ToolInstallPackage/service/rest/R
 params = {
     "serviceKey": getRTMSDataSvcAptRent_de,
     "LAWD_CD": "11680",  # Input 1: 시군구코드 5자리, ex) 11680 = 서울특별시 강남구
-    "DEAL_YMD": "202208",  # Input 2: 년월(YYYYMM), ex) 202208 = 2022년 8월
+    "DEAL_YMD": "202207",  # Input 2: 년월(YYYYMM), ex) 202208 = 2022년 8월
 }
 
 response = requests.get(url, params=params)
@@ -29,4 +29,4 @@ dict_content = xmltodict.parse(response.content)["response"]["body"]["items"]["i
 df = pd.DataFrame(dict_content)
 
 
-df.to_csv("data/서울특별시_강남구_아파트전월세_202208.csv", encoding="utf8", index=False)
+df.to_csv("data/서울특별시_강남구_아파트전월세_202207.csv", encoding="utf8", index=False)
