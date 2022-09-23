@@ -136,3 +136,6 @@ test_*
 
 # Files over 100MB
 data/서울특별시_양천구_건출물대장_전유공용면적.csv
+
+# Notebook sample
+notebook/
